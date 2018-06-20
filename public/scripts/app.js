@@ -4,7 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 function createTweetElement(tweetObject) {
 
@@ -16,7 +20,7 @@ function createTweetElement(tweetObject) {
       <h4 class="userHandle">${tweetObject.user.handle}</h4>
     </header>
     <div class="tweetBody">
-      <p class="tweetTextBlock">${tweetObject.content.text}</p>
+      <p class="tweetTextBlock">${escape(tweetObject.content.text)}</p>
     </div>
     <footer>
       <h5 class="timeStamp">${tweetObject.created_at}</h5>
@@ -76,7 +80,7 @@ $(document).ready(function() {
 
   $("form").on("submit", function (event) {
     event.preventDefault();
-    let $textInTweet = $(this).children(".tweet-input")
+    let $textInTweet = $(this).children(".tweet-input");
     if ($textInTweet.val().length > 140) {
       alert("Tweet is too long. Shorten to at least 140 characters.")
     } else if ($textInTweet.val().length === 0) {
