@@ -58,7 +58,3 @@ article.tweet footer {
   color: #00a087;
   opacity: 0;
 }
-
-.tweetIcons:hover {
-  opacity: 1;
-}

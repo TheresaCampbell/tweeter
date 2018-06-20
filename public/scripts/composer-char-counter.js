@@ -1,15 +1,15 @@
 $(document).ready(function() {
-  tweetInputEffect();
+  tweetCharacterCounterInputEffect();
 });
 
 
 
 //When keys are pressed in the tweet-input box, the character counter decreases.
-const tweetInputEffect = function () {
+const tweetCharacterCounterInputEffect = function () {
 
   $(".tweet-input").on("keyup", function () {
-    var counterValue = 140 - ($(this).val().length);
-    var DOMCounter = $(this).siblings(".counter")
+    let counterValue = 140 - ($(this).val().length);
+    let DOMCounter = $(this).siblings(".counter")
 
     DOMCounter.text(counterValue);
     if (counterValue < 1) {
