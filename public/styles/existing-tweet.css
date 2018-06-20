@@ -37,7 +37,7 @@ article.tweet img {
   font-weight: 300;
 }
 
- .tweetTextBlock {
+.tweetTextBlock {
   margin: 1em;
 }
 
@@ -51,10 +51,14 @@ article.tweet footer {
   display: inline;
 }
 
-.tweetIcons {
+article.tweet .tweetIcons {
   display: inline;
   float: right;
   padding-right: 0.5em;
   color: #00a087;
   opacity: 0;
+}
+
+article.tweet:hover .tweetIcons {
+  opacity: 1;
 }

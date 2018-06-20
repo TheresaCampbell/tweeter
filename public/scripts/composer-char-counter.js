@@ -1,9 +1,3 @@
-$(document).ready(function() {
-  tweetCharacterCounterInputEffect();
-});
-
-
-
 //When keys are pressed in the tweet-input box, the character counter decreases.
 const tweetCharacterCounterInputEffect = function () {
 
@@ -12,10 +6,17 @@ const tweetCharacterCounterInputEffect = function () {
     let DOMCounter = $(this).siblings(".counter")
 
     DOMCounter.text(counterValue);
-    if (counterValue < 1) {
+    if (counterValue < 0) {
       DOMCounter.css('color', 'red');
     } else {
       DOMCounter.css('color', 'black');
     }
   })
 };
+
+
+$(document).ready(function() {
+  tweetCharacterCounterInputEffect();
+});
+
+// add and remove class --> new-tweet.css

@@ -10,13 +10,13 @@ nav {
   padding-right: 2em;
 }
 
-.nav-bar .logo {
+nav .logo {
   width: 80px;
   height: 80px;
   float: left;
 }
 
-.nav-bar .header {
+nav .header {
   float: left;
   padding-left: 10px;
   font-size: 200%;
