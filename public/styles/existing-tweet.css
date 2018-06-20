@@ -3,6 +3,11 @@ article.tweet {
   margin-right: 2em;
   border: 1px solid lightgray;
   border-radius: 5px;
+  opacity: 0.75
+}
+
+article.tweet:hover {
+  opacity: 1;
 }
 
 article.tweet header {
@@ -32,7 +37,7 @@ article.tweet img {
   font-weight: 300;
 }
 
- .tweetBody {
+ .tweetTextBlock {
   margin: 1em;
 }
 
@@ -43,4 +48,17 @@ article.tweet footer {
 .timeStamp {
   margin: 1em;
   font-weight: 300;
+  display: inline;
+}
+
+.tweetIcons {
+  display: inline;
+  float: right;
+  padding-right: 0.5em;
+  color: #00a087;
+  opacity: 0;
+}
+
+.tweetIcons:hover {
+  opacity: 1;
 }

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("Ready to ruuuuumble!");
   tweetInputEffect();
 });
 
@@ -9,14 +8,14 @@ $(document).ready(function() {
 const tweetInputEffect = function () {
 
   $(".tweet-input").on("keyup", function () {
-      var counterValue = 140 - ($(this).val().length);
-      var DOMCounter = $(this).siblings(".counter")
+    var counterValue = 140 - ($(this).val().length);
+    var DOMCounter = $(this).siblings(".counter")
 
-      DOMCounter.text(counterValue);
-      if (counterValue < 1) {
-        DOMCounter.css('color', 'red');
-      } else {
-        DOMCounter.css('color', 'black');
-      }
+    DOMCounter.text(counterValue);
+    if (counterValue < 1) {
+      DOMCounter.css('color', 'red');
+    } else {
+      DOMCounter.css('color', 'black');
+    }
   })
 };
