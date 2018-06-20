@@ -88,7 +88,12 @@ function renderTweets(tweetsArray) {
   })
 }
 
+function loadTweets() {
+
+}
+
 
 $(document).ready(function() {
   renderTweets(data);
+  loadTweets();
 });
