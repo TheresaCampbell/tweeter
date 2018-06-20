@@ -38,7 +38,7 @@ function renderTweets(tweetsArray) {
 
   tweetsArray.forEach(function(individualTweet) {
     var $newTweet = createTweetElement(individualTweet);
-    $tweets.append($newTweet);
+    $tweets.prepend($newTweet);
   })
 }
 

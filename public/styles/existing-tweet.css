@@ -39,6 +39,7 @@ article.tweet img {
 
 .tweetTextBlock {
   margin: 1em;
+  word-wrap: break-word;
 }
 
 article.tweet footer {
