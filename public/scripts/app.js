@@ -54,7 +54,7 @@ function loadTweets() {
     url: '/tweets',
     success: function (moreTweetsJson){
       renderTweets(moreTweetsJson);
-      $(".tweet-input").val('');
+      $(".tweetInput").val('');
       $(".counter").text(140);
     }
   })
@@ -80,13 +80,13 @@ $(document).ready(function() {
 
   $("form").on("submit", function (event) {
     event.preventDefault();
-    let $textInTweet = $(this).children(".tweet-input");
+    let $textInTweet = $(this).children(".tweetInput");
     if ($textInTweet.val().length > 140) {
       alert("Tweet is too long. Shorten to at least 140 characters.")
     } else if ($textInTweet.val().length === 0) {
       alert("Can't submit an empty tweet. Write something!")
     } else {
-      let formData = $(this).children(".tweet-input").serialize();
+      let formData = $(this).children(".tweetInput").serialize();
       submitTweetViaAjax(formData);
     }
   })

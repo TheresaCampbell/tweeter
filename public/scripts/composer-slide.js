@@ -6,7 +6,7 @@ $(document).ready(function() {
 function slideNewTweetOnClick() {
   $(".composeButton").click(function() {
     $(".newTweetContainer").slideToggle("medium", function() {
-      $(".tweet-input").focus();
+      $(".tweetInput").focus();
     });
   });
 };
