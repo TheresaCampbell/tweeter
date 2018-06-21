@@ -5,12 +5,12 @@ textarea {
   width: 97.6%;
 }
 
-.compose-tweet-heading {
+.composeTweetHeading {
   border-bottom: 1px solid;
   margin: 5px;
 }
 
-.new-tweet-container {
+.newTweetContainer {
   padding: 1%;
   margin-left: 2em;
   margin-right: 2em;
@@ -19,7 +19,7 @@ textarea {
   background-color: #eeeeee;
 }
 
-.tweet-button {
+.tweetButton {
   margin-left: 4px;
 }
 

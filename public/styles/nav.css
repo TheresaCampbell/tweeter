@@ -22,3 +22,20 @@ nav .header {
   font-size: 200%;
   line-height: 2.5;
 }
+
+nav .composeButton {
+  color: #00a087;
+  background-color: #E8FDFF;
+  float: right;
+  height: 3.5rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+  border: thin solid black;
+  margin: 0.7rem;
+  font-size: 1.15rem;
+}
+
+nav .composeButton:hover {
+  color: black;
+  background-color: white;
+}
