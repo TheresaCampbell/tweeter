@@ -17,6 +17,10 @@ textarea {
   border: 1px solid lightgray;
   border-radius: 5px;
   background-color: #eeeeee;
+  position: sticky;
+  top: 80px;
+  z-index: 1;
+}
 }
 
 .tweetButton {
@@ -33,6 +37,10 @@ textarea {
 
 form {
   margin-bottom: 6px;
+}
+
+.exceededCharacterLimit {
+  color: red;
 }
 
 /*parent child*/

@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -68,21 +62,27 @@ function submitTweetViaAjax(data) {
       url: '/tweets',
       data: data
     }).done(function () {
+        clearTweets();
         loadTweets();
   })
 }
 
-
+function clearTweets() {
+  $('.allTweetsContainer').empty();
+}
 
 $(document).ready(function() {
 
   loadTweets();
 
   $("form").on("submit", function (event) {
+
     event.preventDefault();
+
     let $textInTweet = $(this).children(".tweetInput");
+
     if ($textInTweet.val().length > 140) {
-      alert("Tweet is too long. Shorten to at least 140 characters.")
+      alert("Tweets can only be 140 characters long.")
     } else if ($textInTweet.val().length === 0) {
       alert("Can't submit an empty tweet. Write something!")
     } else {

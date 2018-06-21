@@ -7,9 +7,9 @@ const tweetCharacterCounterInputEffect = function () {
 
     DOMCounter.text(counterValue);
     if (counterValue < 0) {
-      DOMCounter.css('color', 'red');
+      DOMCounter.addClass("exceededCharacterLimit");
     } else {
-      DOMCounter.css('color', 'black');
+      DOMCounter.removeClass("exceededCharacterLimit");
     }
   })
 };
