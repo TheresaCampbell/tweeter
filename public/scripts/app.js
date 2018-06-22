@@ -17,7 +17,7 @@ function createTweetElement(tweetObject) {
       <p class="tweetTextBlock">${escape(tweetObject.content.text)}</p>
     </div>
     <footer>
-      <h5 class="timeStamp">${tweetObject.created_at}</h5>
+      <h5 class="timeStamp">${new Date (tweetObject.created_at)}</h5>
       <span class="tweetIcons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
