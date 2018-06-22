@@ -41,7 +41,7 @@ function renderTweets(tweetsArray) {
 }
 
 
-function loadTweets() {
+function loadTweetsViaAjax() {
 
     $.ajax({
     method: 'GET',
@@ -63,9 +63,10 @@ function submitTweetViaAjax(data) {
       data: data
     }).done(function () {
         clearTweets();
-        loadTweets();
+        loadTweetsViaAjax();
   })
 }
+
 
 function clearTweets() {
   $('.allTweetsContainer').empty();
@@ -73,7 +74,7 @@ function clearTweets() {
 
 $(document).ready(function() {
 
-  loadTweets();
+  loadTweetsViaAjax();
 
   $("form").on("submit", function (event) {
 

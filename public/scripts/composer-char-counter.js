@@ -18,5 +18,3 @@ const tweetCharacterCounterInputEffect = function () {
 $(document).ready(function() {
   tweetCharacterCounterInputEffect();
 });
-
-// add and remove class --> new-tweet.css
