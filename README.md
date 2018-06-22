@@ -19,3 +19,9 @@ Tweets are composed and posted on the app's homepage and saved in a database.
 - Chance
 - MD5
 - Monngodb
+
+## Screenshots
+
+!["Screenshot of Tweeter home page."](https://github.com/TheresaCampbell/tweeter/blob/master/docs/tweeter.png?raw=true)
+!["Screenshot of functions used to submit and post tweets."](https://github.com/TheresaCampbell/tweeter/blob/master/docs/tweet-posting-functions.png?raw=true)
+!["Screenshot of nav CSS."](https://github.com/TheresaCampbell/tweeter/blob/master/docs/nav-css.png?raw=true)
