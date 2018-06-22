@@ -21,7 +21,7 @@ article.tweet img {
   border-radius: 0.75em;
 }
 
-.username {
+article.tweet  h3.username {
   padding-top: 0.3em;
   margin: 0em;
   color: gray;
@@ -29,7 +29,7 @@ article.tweet img {
   float: left;
 }
 
-.userHandle {
+article.tweet h4.userHandle {
   float: right;
   margin-top: 1em;
   margin-right: 0.5em;
@@ -37,7 +37,7 @@ article.tweet img {
   font-weight: 300;
 }
 
-.tweetTextBlock {
+article.tweet p.tweetTextBlock {
   margin: 1em;
   word-wrap: break-word;
 }
@@ -46,7 +46,7 @@ article.tweet footer {
   border-top: 0.01em solid lightgray;
 }
 
-.timeStamp {
+article.tweet h5.timeStamp {
   margin: 1em;
   font-weight: 300;
   display: inline;

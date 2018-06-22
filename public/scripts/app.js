@@ -1,8 +1,11 @@
+//Function that escapes characters input by users, ensuring safe text.
 function escape(str) {
-  var div = document.createElement('div');
+
+  const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
 
 function createTweetElement(tweetObject) {
 
@@ -30,14 +33,9 @@ function createTweetElement(tweetObject) {
 }
 
 
-function renderTweets(tweetsArray) {
+function clearTweets() {
 
-  let $tweets = $('.allTweetsContainer');
-
-  tweetsArray.forEach(function(individualTweet) {
-    var $newTweet = createTweetElement(individualTweet);
-    $tweets.prepend($newTweet);
-  })
+  $('.allTweetsContainer').empty();
 }
 
 
@@ -52,7 +50,7 @@ function loadTweetsViaAjax() {
       $(".counter").text(140);
     }
   })
-};
+}
 
 
 function submitTweetViaAjax(data) {
@@ -68,20 +66,24 @@ function submitTweetViaAjax(data) {
 }
 
 
-function clearTweets() {
-  $('.allTweetsContainer').empty();
+function renderTweets(tweetsArray) {
+
+  let $tweets = $('.allTweetsContainer');
+
+  tweetsArray.forEach(function(individualTweet) {
+    let $newTweet = createTweetElement(individualTweet);
+    $tweets.prepend($newTweet);
+  })
 }
+
 
 $(document).ready(function() {
 
   loadTweetsViaAjax();
 
   $("form").on("submit", function (event) {
-
     event.preventDefault();
-
     let $textInTweet = $(this).children(".tweetInput");
-
     if ($textInTweet.val().length > 140) {
       alert("Tweets can only be 140 characters long.")
     } else if ($textInTweet.val().length === 0) {
